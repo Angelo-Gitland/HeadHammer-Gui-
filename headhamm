@@ -1,0 +1,205 @@
+--[=[
+
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+
+88      88    88    88            odD'      88      88    88 88ooo88 
+
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+
+designed using localmaze gui creator
+
+]=]
+
+local CollectionService = game:GetService("CollectionService");
+
+local G2L = {};
+
+G2L["ScreenGui_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+
+G2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+CollectionService:AddTag(G2L["ScreenGui_1"], [[main]]);
+
+G2L["Frame_2"] = Instance.new("Frame", G2L["ScreenGui_1"]);
+
+G2L["Frame_2"]["BorderSizePixel"] = 0;
+
+G2L["Frame_2"]["BackgroundColor3"] = Color3.fromRGB(70, 11, 255);
+
+G2L["Frame_2"]["Size"] = UDim2.new(0, 172, 0, 154);
+
+G2L["Frame_2"]["Position"] = UDim2.new(0, 275, 0, 65);
+
+G2L["TextLabel_3"] = Instance.new("TextLabel", G2L["Frame_2"]);
+
+G2L["TextLabel_3"]["BorderSizePixel"] = 0;
+
+G2L["TextLabel_3"]["BackgroundColor3"] = Color3.fromRGB(72, 7, 255);
+
+G2L["TextLabel_3"]["Size"] = UDim2.new(0, 172, 0, 46);
+
+G2L["TextLabel_3"]["Text"] = [[headhammer gui]];
+
+G2L["TextButton_4"] = Instance.new("TextButton", G2L["Frame_2"]);
+
+G2L["TextButton_4"]["BorderSizePixel"] = 0;
+
+G2L["TextButton_4"]["BackgroundColor3"] = Color3.fromRGB(36, 6, 255);
+
+G2L["TextButton_4"]["Size"] = UDim2.new(0, 96, 0, 46);
+
+G2L["TextButton_4"]["Text"] = [[decal]];
+
+G2L["TextButton_4"]["Position"] = UDim2.new(0, 0, 0, 50);
+
+G2L["LocalScript_5"] = Instance.new("LocalScript", G2L["TextButton_4"]);
+
+G2L["TextLabel_6"] = Instance.new("TextLabel", G2L["Frame_2"]);
+
+G2L["TextLabel_6"]["BorderSizePixel"] = 0;
+
+G2L["TextLabel_6"]["BackgroundColor3"] = Color3.fromRGB(0, 41, 255);
+
+G2L["TextLabel_6"]["Size"] = UDim2.new(0, 66, 0, 38);
+
+G2L["TextLabel_6"]["Text"] = [[made by me]];
+
+G2L["TextLabel_6"]["Position"] = UDim2.new(0, -60, 0, 0);
+
+G2L["UIDragDetector_7"] = Instance.new("UIDragDetector", G2L["Frame_2"]);
+
+G2L["UIDragDetector_7"]["DragUDim2"] = UDim2.new(0, 22, 0, -31);
+
+G2L["TextButton_8"] = Instance.new("TextButton", G2L["Frame_2"]);
+
+G2L["TextButton_8"]["BorderSizePixel"] = 0;
+
+G2L["TextButton_8"]["BackgroundColor3"] = Color3.fromRGB(49, 0, 255);
+
+G2L["TextButton_8"]["Size"] = UDim2.new(0, 84, 0, 46);
+
+G2L["TextButton_8"]["Text"] = [[skybox]];
+
+G2L["TextButton_8"]["Position"] = UDim2.new(0, 4, 0, 102);
+
+G2L["LocalScript_9"] = Instance.new("LocalScript", G2L["TextButton_8"]);
+
+local function C_5()
+
+	local script = G2L["LocalScript_5"];	function click()	
+
+	 function exPro(root)	
+
+	  for _, v in pairs(root:GetChildren()) do	
+
+	   if v:IsA("Decal") and v.Texture ~= "http://www.roblox.com/asset/?id= 137486330315274" then	
+
+	    v.Parent = nil	
+
+	   elseif v:IsA("BasePart") then	
+
+	    v.Material = "Plastic"	
+
+	    v.Transparency = 0	
+
+	    local One = Instance.new("Decal", v)	
+
+	    local Two = Instance.new("Decal", v)	
+
+	    local Three = Instance.new("Decal", v)	
+
+	    local Four = Instance.new("Decal", v)	
+
+	    local Five = Instance.new("Decal", v)	
+
+	    local Six = Instance.new("Decal", v)	
+
+	    One.Texture = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+	    Two.Texture = "http://www.roblox.com/asset/?id= 108871641189765"	
+
+	    Three.Texture = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+	    Four.Texture = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+	    Five.Texture = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+	    Six.Texture = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+	    One.Face = "Front"	
+
+	    Two.Face = "Back"	
+
+	    Three.Face = "Right"	
+
+	    Four.Face = "Left"	
+
+	    Five.Face = "Top"	
+
+	    Six.Face = "Bottom"	
+
+	   end	
+
+	   exPro(v)	
+
+	  end	
+
+	 end	
+
+	 function asdf(root)	
+
+	  for _, v in pairs(root:GetChildren()) do	
+
+	   asdf(v)	
+
+	  end	
+
+	 end	
+
+	 exPro(game.Workspace)	
+
+	 asdf(game.Workspace)	
+
+	end	
+
+	
+
+	script.Parent.MouseButton1Down:connect(click)	
+
+end;
+
+task.spawn(C_5);
+
+local function C_9()
+
+	local script = G2L["LocalScript_9"];
+
+	s = Instance.new("Sky")	
+
+	 s.Name = "Sky"	
+
+	 s.Parent = game.Lighting	
+
+	 s.SkyboxBk = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+	 s.SkyboxDn = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+	 s.SkyboxFt = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+	 s.SkyboxLf = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+	 s.SkyboxRt = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+	 s.SkyboxUp = "http://www.roblox.com/asset/?id= 137486330315274"	
+
+end;
+
+task.spawn(C_9);
+
+return G2L["ScreenGui_1"], require;
